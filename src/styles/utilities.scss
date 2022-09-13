@@ -1,0 +1,21 @@
+.container {
+  max-width: 1200px;
+  padding-inline: 1.5rem;
+  margin-inline: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.fs-heading {
+  font-size: var(--fs-900);
+}

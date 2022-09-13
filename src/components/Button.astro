@@ -1,0 +1,39 @@
+---
+const { href, class: className } = Astro.props
+---
+
+<a href={href} class:list={[className, 'btn']}>
+  <slot />
+</a>
+
+<style lang="scss">
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75em 1em;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    line-height: 1;
+    border: 1px solid transparent;
+    font-weight: 600;
+    text-decoration: none;
+    color: inherit;
+    transition: 0.2s ease-in-out;
+  }
+
+  .primary {
+    background-color: var(--clr-primary-400);
+    color: var(--clr-white);
+
+    &:hover {
+      background-color: var(--clr-primary-500);
+    }
+  }
+
+  .outline {
+    background-color: transparent;
+    border-color: var(--clr-white);
+    color: var(--clr-white);
+  }
+</style>

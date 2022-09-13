@@ -1,0 +1,116 @@
+---
+import Button from './Button.astro'
+import HeaderLink from './HeaderLink.astro'
+import Menu from './Menu.svelte'
+---
+
+<header class="primary-header">
+  <div class="container">
+    <div class="top-navigation-wrap">
+      <p>Logo</p>
+      <button
+        type="button"
+        aria-expanded="false"
+        aria-label="Menu"
+        aria-controls="primary-navigation"
+        class="mobile-nav-toggle"
+      >
+        <svg width="24" height="24" aria-hidden="true">
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"> </path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="top-navigation-main">
+      <nav data-visible="false">
+        <ul
+          aria-label="Primary"
+          id="primary-navigation"
+          class="primary-navigation"
+          role="list"
+        >
+          <li><HeaderLink href="/">Home</HeaderLink></li>
+          <li><HeaderLink href="/about">About</HeaderLink></li>
+          <li><HeaderLink href="/contact">Contact</HeaderLink></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<style lang="scss">
+  header {
+    background-color: #333;
+    // padding-block: 1rem;
+    position: sticky;
+    top: 0;
+  }
+
+  .primary-header.show-nav .container {
+    height: auto;
+  }
+
+  .primary-header .container {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    gap: 1rem;
+  }
+
+  .primary-header .top-navigation-wrap {
+    display: flex;
+    align-items: center;
+    flex: 1 1;
+    height: 4rem;
+    justify-content: space-between;
+  }
+
+  .show-nav .top-navigation-main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .top-navigation-main {
+    display: none;
+    justify-content: space-between;
+    padding: 0;
+    width: 100%;
+  }
+
+  .primary-navigation {
+    grid-gap: 1rem;
+    box-sizing: border-box;
+    list-style: none;
+    margin-top: 1rem;
+    padding: 0;
+    width: 100%;
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  /* Reset button styling */
+  button {
+    appearance: none;
+    background: none;
+    border: none;
+
+    &:focus-visible {
+      outline-color: #5e9eff;
+      outline-offset: 1px;
+      outline-style: auto;
+    }
+  }
+</style>
+
+<script>
+  const header = document.querySelector('header')
+  const navToggle = document.querySelector('.mobile-nav-toggle')
+
+  navToggle?.addEventListener('click', () => {
+    const expanded = navToggle.getAttribute('aria-expanded')
+    const value = expanded === 'true' ? true : false
+
+    navToggle.setAttribute('aria-expanded', (!value).toString())
+    header?.classList.toggle('show-nav')
+  })
+</script>

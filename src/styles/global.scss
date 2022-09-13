@@ -1,0 +1,13 @@
+@use 'reset';
+@use 'variables';
+@use 'utilities';
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  font-family: sans-serif;
+  font-size: var(--fs-body);
+  background-color: rgb(17 24 39);
+  color: #fff;
+}

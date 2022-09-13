@@ -1,0 +1,15 @@
+:root {
+  --clr-primary-400: hsl(0 81% 60%);
+  --clr-primary-500: hsl(0 81% 40%);
+  --clr-white: hsl(0 0% 100%);
+  --fs-300: 0.875rem;
+  --fs-400: 1rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.5rem;
+  --fs-700: 2rem;
+  --fs-800: 3rem;
+  --fs-900: 4rem;
+
+  --fs-heading: var(--fs-900);
+  --fs-body: var(--fs-400);
+}
