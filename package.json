@@ -3,20 +3,17 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "astro dev --host",
+    "dev": "astro dev --host 172.23.232.164",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
-  "devDependencies": {
-    "@astrojs/svelte": "^1.0.0",
-    "sass": "^1.54.8",
-    "svelte": "^3.50.1"
-  },
   "dependencies": {
     "@astrojs/sitemap": "^1.0.0",
-    "astro": "^1.2.2",
-    "nanostores": "^0.7.0"
+    "astro": "^1.2.3"
+  },
+  "devDependencies": {
+    "sass": "^1.54.9"
   }
 }
