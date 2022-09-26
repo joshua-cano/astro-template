@@ -51,3 +51,23 @@ svg {
     scroll-behavior: auto !important;
   }
 }
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  --color-base-gray: 250, 14%;
+  --color-gray-90: var(--color-base-gray), 90%;
+  --theme-dim-light: hsla(var(--color-gray-90), 0.2);
+  background-color: var(--theme-dim-light);
+  border: 4px solid transparent;
+  background-clip: content-box;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}

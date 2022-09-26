@@ -12,12 +12,12 @@
 
 <style lang="scss">
   button {
-    grid-area: button;
     appearance: none;
     background: none;
     border: none;
+    fill: var(--theme-text);
     cursor: pointer;
-    
+
     &:focus-visible {
       outline-color: #5e9eff;
       outline-offset: 1px;
@@ -32,10 +32,13 @@
 
 <script>
   const navToggle = document.querySelector('.mobile-nav-toggle')
+  const body = document.querySelector('body')
 
   navToggle?.addEventListener('click', () => {
     const expanded = navToggle.getAttribute('aria-expanded')
     const value = expanded === 'true' ? true : false
+
+    body?.classList.toggle('lock-position')
 
     navToggle.setAttribute('aria-expanded', (!value).toString())
   })

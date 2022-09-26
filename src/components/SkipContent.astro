@@ -1,0 +1,22 @@
+<a href="#main-content" class="skip-nav-link">Skip to main content</a>
+
+<style>
+  .skip-nav-link {
+    background-color: #333;
+    color: var(--clr-white);
+    text-decoration: none;
+    padding: 1em;
+    border-radius: 0.25em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-120%);
+    transition: transform 325ms ease-in;
+    z-index: 2;
+  }
+
+  .skip-nav-link:focus-visible {
+    transform: translateY(0);
+  }
+</style>

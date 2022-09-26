@@ -16,6 +16,7 @@ const { href, class: className } = Astro.props
     text-align: center;
     line-height: 1;
     border: 1px solid transparent;
+    border-radius: 0.25rem;
     font-weight: 600;
     text-decoration: none;
     color: inherit;
@@ -23,17 +24,17 @@ const { href, class: className } = Astro.props
   }
 
   .primary {
-    background-color: var(--clr-primary-400);
-    color: var(--clr-white);
+    background-color: var(--theme-accent);
+    color: var(--theme-text);
 
     &:hover {
-      background-color: var(--clr-primary-500);
+      background-color: var(--theme-accent-secondary);
     }
   }
 
   .outline {
     background-color: transparent;
-    border-color: var(--clr-white);
-    color: var(--clr-white);
+    border-color: var(--theme-text);
+    color: var(--theme-text);
   }
 </style>

@@ -6,13 +6,21 @@ import Button from './Button.astro'
   <div class="container">
     <h1 class="fs-heading">Heading for Website</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, beatae?</p>
-    <Button href="/" class="primary">Get Started</Button>
-    <Button href="/" class="outline">Contact</Button>
+    <div class="btn-group">
+      <Button href="/" class="primary">Get Started</Button>
+      <Button href="/" class="outline">Contact</Button>
+    </div>
   </div>
 </section>
 
 <style lang="scss">
   section {
     padding-block: 5rem;
+  }
+
+  .btn-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
   }
 </style>
